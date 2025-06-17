@@ -53,11 +53,14 @@
   };
 
   environment.systemPackages = with pkgs; [
+
+  # Terminal Tools 
   htop
-  mpv
-  yt-dlp 
-  git
   pkgs.xorg.xinit
+
+  # Media Ads
+  mpv
+
   ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
