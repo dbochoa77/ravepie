@@ -7,10 +7,11 @@
     ];
 
   # Bootloader.
+  boot.loader.generic-extlinux-compatible.enable = true;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
+  
   networking.hostName = "ravepie"; # Define your hostname.
 
   # Enable networking
@@ -62,7 +63,6 @@
   services.getty.autologinUser = "ravepie";  
 
   # Enable PipeWire (sound)
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
