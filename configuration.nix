@@ -7,8 +7,6 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -62,9 +60,20 @@
 
   # Auto Login 
   services.getty.autologinUser = "ravepie";  
-  
+
+  # Enable PipeWire (sound)
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    audio.enable = true;
+    pulse.enable = true;
+ };
+
+# Enable Flakes
+nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # X11
   services.xserver.enable = true;
-
+  
   services.xserver.displayManager.startx.enable = true;
 }
