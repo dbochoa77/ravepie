@@ -68,10 +68,11 @@
     enable = true;
     audio.enable = true;
     pulse.enable = true;
- };
+  };
 
-# Enable Flakes
-nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # Enable Flakes
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
   # X11
   services.xserver.enable = true;
   
