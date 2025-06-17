@@ -1,1 +1,4 @@
-exec mpv --fs --shuffle --loop=inf /home/ravepie/
+echo "waiting...."
+read -t 10 -p ">> "
+
+exec mpv --fs --shuffle /home/ravepie/
