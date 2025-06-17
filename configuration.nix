@@ -81,6 +81,7 @@
   
   # X11
   services.xserver.enable = true;
-  
+
+  # Startx
   services.xserver.displayManager.startx.enable = true;
 }
