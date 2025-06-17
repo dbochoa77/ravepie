@@ -69,7 +69,7 @@
   services.getty.autologinUser = "ravepie";  
 
   # Enable PipeWire (sound)
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     audio.enable = true;
